@@ -1,120 +1,106 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
+    <div class="head-wrapper">    
+      <h2>{{ title }}</h2>
+    </div>
+    <div class="sub-head-wrapper">
+      <h4>This is where your text starts. You can click here and start typing. Et dolore magnam aliquam quaerat voluptatem ut enim ad minima veniam quis nostrum exercitationem ullam corporis.</h4>
+    </div>
     <ul>
       <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
+        <img class="bg-img" src="../assets/SVGLogo.svg" alt="">
+        <p>name of development</p>
       </li>
       <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
+        <img class="bg-img" src="../assets/SVGLogo.svg" alt="">
+        <p>name of development</p>
       </li>
       <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
+        <img class="bg-img" src="../assets/SVGLogo.svg" alt="">
+        <p>name of development</p>
+      </li>
+      <li>
+        <img class="bg-img" src="../assets/SVGLogo.svg" alt="">
+        <p>name of development</p>
+      </li>
+      <li>
+        <img class="bg-img" src="../assets/SVGLogo.svg" alt="">
+        <p>name of development</p>
       </li>
     </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
+    
   </div>
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
-  props: {
-    msg: String
-  }
+  props:[
+    "title"
+  ]
+ 
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+
+.head-wrapper{
+  margin-left: 100px;
 }
-ul {
-  list-style-type: none;
+
+h2 {
+ width: 100%;
+ text-align: left;
+ font-size: 28px;
+ font-weight: 200;
+ margin-bottom: 10px;;
+}
+
+.head-wrapper:after{
+    content:'';
+    display:block;
+    border:0.5px solid #ffc000;
+    position: absolute;
+    /* top: 0px; */
+    margin-left: 100px;
+    width: 100px;
+    left: 0;
+    z-index: 3;
+}
+
+.sub-head-wrapper{
+  /* border: 1px solid black; */
+  text-align: left;
+  width: 700px;
+  margin-left: 100px;
   padding: 0;
 }
+
+h4{
+ color: #acacac;
+ font-size: 16px;
+ font-weight: 200;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 100px;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+}
+
+img{
+  width: 100%;
+}
+
 li {
-  display: inline-block;
-  margin: 0 10px;
+  height: 250px;
+  width: 250px;
+  background-color: azure;
+  margin: 20px 40px 20px 0px;
 }
 a {
   color: #42b983;
