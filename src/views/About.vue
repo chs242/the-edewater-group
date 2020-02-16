@@ -58,7 +58,7 @@ export default {
   }
 
   h3{
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
   }
 
   h3:after{
@@ -67,6 +67,7 @@ export default {
     border:0.5px solid #ffc000;
     position: absolute;
     margin-left: 70px;
+    margin-top: 5px;
     width: 100px;
     left: 0;
     z-index: 3;
