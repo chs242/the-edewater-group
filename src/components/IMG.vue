@@ -26,4 +26,48 @@ export default {
   .bg-img{
     filter: opacity(60%);
   }
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    .image-cont{
+      min-height: 350px;
+    }
+
+    img{
+      
+      /* transform: scale(2); */
+    }
+  }  
+
+  @media (min-width: 730px) and (max-width: 930px) {
+    .image-cont{
+      min-height: 450px;
+    }
+     img{
+      transform: scale(2);
+    }
+  }
+  @media (min-width: 610px) and (max-width: 730px) {
+    .image-cont{
+      min-height: 400px;
+    }
+     img{
+      transform: scale(2);
+    }
+  }
+  @media (min-width: 520px) and (max-width: 610px) {
+    .image-cont{
+      min-height: 380px;
+    }
+     img{
+      transform: scale(3);
+    }
+  }
+  @media (min-width: 320px) and (max-width: 520px) {
+    .image-cont{
+      min-height: 400px;
+    }
+     img{
+      transform: scale(4);
+    }
+  }
 </style>

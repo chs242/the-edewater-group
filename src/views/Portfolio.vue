@@ -7,7 +7,7 @@
     <HelloWorld title="developments of 10 units+"></HelloWorld>
     <HelloWorld title="developments of 15 units+"></HelloWorld>
     <HelloWorld title="profitable developments of 50 units+"></HelloWorld>
-    <Footer></Footer>
+    <NewFooter />
   </div>
 </template>
 
@@ -16,14 +16,14 @@
 
 import IMG from "@/components/IMG.vue";
 import HelloWorld from "@/components/HelloWorld.vue";
-import Footer from "@/components/Footer.vue";
+import NewFooter from "@/components/NewFooter.vue";
 
 export default {
   name: "Portfolio",
   components: {
     IMG,
     HelloWorld,
-    Footer
+    NewFooter
   }
 };
 </script>
@@ -39,12 +39,9 @@ export default {
     overflow-x: hidden;
     
   }
-
-  /* .image-cont{
-    height: 40vh;
-    width: 100%
+  @media (min-width: 320px) and (max-width: 1024px) {
+    .root-portfolio{
+      width: 100%;
+    }
   }
-  .bg-img{
-    filter: opacity(60%);
-  } */
 </style>

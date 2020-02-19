@@ -47,14 +47,9 @@ export default {
 
 .head-wrapper{
   margin-left: 100px;
-}
-
-h2 {
- width: 100%;
+  width: 100%;
  text-align: left;
- font-size: 28px;
  font-weight: 200;
- margin-bottom: 10px;;
 }
 
 .head-wrapper:after{
@@ -70,16 +65,16 @@ h2 {
 }
 
 .sub-head-wrapper{
-  /* border: 1px solid black; */
   text-align: left;
   width: 700px;
   margin-left: 100px;
   padding: 0;
+  color: #acacac;
+ font-size: 16px;
+ 
 }
 
 h4{
- color: #acacac;
- font-size: 16px;
  font-weight: 200;
 }
 
@@ -104,5 +99,67 @@ li {
 }
 a {
   color: #42b983;
+}
+
+@media (min-width: 500px) and (max-width: 520px) {
+    .hello{
+      margin-top: 70px;
+    }
+}
+@media (min-width: 580px) and (max-width: 610px) {
+    .hello{
+      margin-top: 50px;
+    }
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+    .head-wrapper{
+      margin: 0;
+    }
+
+    .sub-head-wrapper{
+      width: 100%;
+      margin: 0;
+    }
+    h2, h4{
+      margin: 0;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .head-wrapper:after{
+      margin-left: 45%;
+    }
+
+    ul{
+      justify-content: center;
+      margin: 0;
+    }
+
+    li{
+      width: 60%;
+      height: 50vw;
+      margin: 20px 0;
+    }
+    
+}
+@media (min-width: 950px) and (max-width: 1024px) {
+    .head-wrapper:after{
+      margin-left: 45%;
+    }
+}
+@media (min-width: 750px) and (max-width: 950px) {
+    .head-wrapper:after{
+      margin-left: 40%;
+    }
+}
+@media (min-width: 550px) and (max-width: 750px) {
+    .head-wrapper:after{
+      margin-left: 40%;
+    }
+}
+@media (min-width: 320px) and (max-width: 550px) {
+    .head-wrapper:after{
+      margin-left: 38%;
+    }
 }
 </style>

@@ -14,18 +14,18 @@
         </div>
       </div>
     </div>
-    <Footer />
+    <NewFooter />
   </div>
 </template>
 
 <script>
 import IMG from "@/components/IMG.vue"
-import Footer from "@/components/Footer.vue"
+import NewFooter from "@/components/NewFooter.vue"
 export default {
   name: "About",
   components:{
     IMG,
-    Footer
+    NewFooter
   }
 }
 </script>
@@ -88,5 +88,27 @@ export default {
     font-size: 1.5rem;
   }
 
+@media (min-width: 320px) and (max-width: 1024px) {
+  .root-about{
+    width: 100%;
+  }
+  .about-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+  }
 
+  .inner-wrapper{
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 0px;
+  }
+
+  
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  h3:after{
+    margin-left: 10%;
+  }
+}
 </style>

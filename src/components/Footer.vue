@@ -30,14 +30,18 @@ export default {
 
 .root-footer{
     display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #f2f2f2;
 }
 
 .footer{
   width: 100%;
   height: 100px;
-  background-color: #f2f2f2;
+  
   display: flex;
   flex-direction: column;
+  z-index: 100;
 }
 
 .footer-site-links{
@@ -73,11 +77,32 @@ p{
 
 .footer-image{
     width: 30%;
-    background-color: #f2f2f2
+    /* background-color: #f2f2f2; */
+    
 }
 
 img{
     padding-top: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .root-footer{
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    flex-direction: row-reverse;
+    height: 150px;
+  }
+  .footer-image{
+    z-index: 100;
+    background-color: #f2f2f2;
+  }
+
+  .footer{
+    background-color: #f2f2f2;
+    height: 150px;
+  }
+  
 }
 
 </style>
