@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <div class="logo"></div>
+      <div class="logo-wrapper"><img src="../public/assets/SmallLogo.png" alt=""></div>
       <router-link to="/">Home</router-link> 
       <router-link to="/about">About</router-link>
       <router-link to="/portfolio">Portfolio</router-link>
@@ -56,8 +56,13 @@
   color: #42b983;
 }
 
-.logo{
-  height: 60%;
+.logo-wrapper{
+  height: 50%;
   width: 100%;
+  padding-top: 30%;
+}
+
+img{
+  width: 86%;
 }
 </style>
