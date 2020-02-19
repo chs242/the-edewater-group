@@ -1,24 +1,24 @@
 <template>
-    <div class="root-contact-form">
-        <div class="contact-wrapper">
-            <div class="about-title-wrapper">
-                <div class="inner-wrapper">
-                    <h3>Contact</h3>
-                    <p><i>Please be in touch</i></p>
-                </div>
+  <div class="root-contact-form">
+    <div class="contact-wrapper">
+        <div class="about-title-wrapper">
+          <div class="inner-wrapper">
+            <h3>Contact</h3>
+            <p><i>Please be in touch</i></p>
+          </div>
+        </div>
+        <div class="about-text-wrapper">
+          <div id="contact-form" class="contact-form">
+            <div class="separator"></div>
+            <div v-if="isSending" class="loading">Sending...</div>
+              <form class="form" @submit="onSubmit">
+                <input required name="name" v-model='contact.name' placeholder="Name" type="text" autocomplete="off">
+                <input required name="email" v-model="contact.email" placeholder="E-mail" type="email" autocomplete="off">
+                <textarea name="message" v-model="contact.message" rows="4" placeholder="Message"></textarea>
+                <button class="button">Send</button>
+              </form>
             </div>
-            <div class="about-text-wrapper">
-                <div id="contact-form" class="contact-form">
-                    <div class="separator"></div>
-                    <div v-if="isSending" class="loading">Sending...</div>
-                        <form class="form" @submit="onSubmit">
-                            <input required name="name" v-model='contact.name' placeholder="Name" type="text" autocomplete="off">
-                            <input required name="email" v-model="contact.email" placeholder="E-mail" type="email" autocomplete="off">
-                            <textarea name="message" v-model="contact.message" rows="4" placeholder="Message"></textarea>
-                        <button class="button">Send</button>
-                        </form>
-                    </div>
-            </div>
+          </div>
         </div>
     </div>
 </template>
@@ -70,11 +70,6 @@ export default {
 </script>
 
 <style scoped>
-
- .root-contact-form{
-    
-  }
-
   .contact-wrapper{
     display: flex;
     width: 100%;
@@ -114,7 +109,8 @@ export default {
   }
 
   .about-text-wrapper{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .inner-text-wrapper{
@@ -185,4 +181,35 @@ export default {
     font-size: 1rem;
     border-radius: 3px
     }
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    .contact-wrapper{
+      width: 80%;
+      flex-direction: column;
+      margin-bottom: 0px;
+    }
+
+    .about-title-wrapper, .about-text-wrapper{
+      width: 100%;
+      margin: 0 10%;
+    }
+
+    .inner-wrapper{
+      margin-bottom: 10px;
+      margin-left: 0px;
+    }
+    
+  h3:after{
+    content:'';
+    display:block;
+    border:0.5px solid #ffc000;
+    position: absolute;
+    margin-left: 8%;
+    margin-top: 5px;
+    width: 100px;
+    left: 0px;
+    z-index: 3;
+  }
+}
+
 </style>

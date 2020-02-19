@@ -2,7 +2,7 @@
   <div class="root-contact">
       <IMG />
       <ContactForm></ContactForm>
-      <Footer></Footer>
+      <NewFooter />
     </div>
 </template>
 
@@ -11,14 +11,14 @@
 
 import IMG from "@/components/IMG.vue";
 import ContactForm from "@/components/ContactForm.vue";
-import Footer from "@/components/Footer.vue";
+import NewFooter from "@/components/NewFooter.vue";
 
 export default {
   name: "Contact",
   components: {
     ContactForm,
     IMG,
-    Footer
+    NewFooter
   }
 };
 </script>
@@ -33,5 +33,11 @@ export default {
     overflow-y: scroll;
     overflow-x: hidden;
     
+  }
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    .root-contact{
+      width: 100%;
+    }
   }
 </style>

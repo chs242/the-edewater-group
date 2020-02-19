@@ -89,8 +89,8 @@ export default {
 
   .title-cont{
     width: 80%;
-    margin: 300px auto;
-    font-size: 62px;
+     margin: 200px auto;
+    font-size: 42px;
     font-weight: 100;
     color: white;
     letter-spacing: 3px;
@@ -99,13 +99,13 @@ export default {
 
 
   .image-cont{
-    height: 120%;
+    height: 100%;
     width: 100%;
   }
 
   .bg-img{
     filter:  saturate(60%);
-    height: 100%;
+    height: 110vh;
     transform: scale(1.5);
     width: 100vw;
     min-width: 773px;
@@ -115,9 +115,13 @@ export default {
 
 @media (min-width: 320px) and (max-width: 580px) {
   /* Device = Most of the Smartphones Mobiles (Portrait)*/
+ .image-cont{
+    height: 100vh;
+    width: 100%;
+  }
  .bg-img{
     filter:  saturate(60%);
-    height: 90%;
+    height: 90vh;
     transform: scale(2);
     width: 100vw;
   }

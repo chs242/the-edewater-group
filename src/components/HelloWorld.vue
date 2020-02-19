@@ -136,8 +136,8 @@ a {
     }
 
     li{
-      width: 60%;
-      height: 50vw;
+      width: 80%;
+      height: 65vw;
       margin: 20px 0;
     }
     
