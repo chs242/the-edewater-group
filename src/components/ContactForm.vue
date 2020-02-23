@@ -10,8 +10,8 @@
         <div class="about-text-wrapper">
           <div id="contact-form" class="contact-form">
             <div class="separator"></div>
-            <div v-if="isSending" class="loading">Sending...</div>
-              <form class="form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+           
+              <form @submit.prevent="handleSubmit" class="form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                 <!-- Hidden input to check for bots -->
                 <input type="hidden" name="form-name" value="contact" />
 
