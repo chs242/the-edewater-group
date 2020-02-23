@@ -26,9 +26,6 @@ export default {
       navbarOpen: false,
     }
   },
-  methods:{
-    toggleSidebar () { if (this.$sidebar.showSidebar) { this.$sidebar.displaySidebar(false) } }
-  }
 }
 </script>
 <style>
@@ -116,20 +113,35 @@ img{
   height: 70px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 100;
+  padding-top: 0px;
 }
 
 #nav a{
-  margin-left: 30%;
+  padding: 0;
+  margin: 0;
 }
+.logo-wrapper, #nav>a{
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  margin-top: 20px;
+}
+
+img{
+  width: 50%;
+  padding-left: 10px;
+  float: left;
+}
+
 .for-mobile{
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5em;
   display: inline;
   padding: 0;
-  padding-top: 20px;
-  max-width: content;
+  
+  
 }
 
 .mobile {
@@ -143,18 +155,6 @@ img{
 #nav a.router-link-exact-active {
   color: #2c3e50;
 }
-
-.logo-wrapper{
-  width: 100%;
-  padding-top: 20px;
-  margin-right: 30%;
-}
-
-img{
-  width: 150px;
-}
-
-
 
 /* sidenav  */
 .sidenav{
@@ -208,11 +208,6 @@ img{
 }
 
 @media (min-width: 320px) and (max-width: 580px) {
-  /* Device = Most of the Smartphones Mobiles (Portrait)*/
-  .logo-wrapper{
-    padding-top: 20px;
-    width: 100%;
-    margin-right: 0px;
-  }
+  
 }
 </style>

@@ -73,9 +73,9 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     overflow-x: hidden;
     
   }
@@ -84,20 +84,25 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    height: 60%;
+    /* height: 60%; */
     width: 100%;
     z-index: 2;
   }
 
   .title-cont{
     width: 80%;
-    height: 100%;
+    /* height: 100%; */
     margin: 40% auto;
+    margin-bottom: 0;
     font-size: 42px;
     font-weight: 100;
     color: white;
     letter-spacing: 3px;
     font-family: 'Josefin Sans', sans-serif;
+  }
+
+  h6{
+    margin-bottom: 0;
   }
 
 
@@ -121,7 +126,7 @@ export default {
 @media (min-width: 320px) and (max-width: 580px) {
   /* Device = Most of the Smartphones Mobiles (Portrait)*/
  .image-cont{
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     overflow-x: hidden;
     
