@@ -25,10 +25,11 @@ export default {
 
 <style scoped>
   .home{
+    /* background-color: #f2f2f2; */
     position: absolute;
     top: 0;
     right: 0;
-    max-height: 100%;
+    height: 100%;
     width: 80%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -46,7 +47,8 @@ export default {
 
   .title-cont{
     width: 80%;
-     margin: 300px auto;
+    margin: 0 auto;
+    /* padding: 200px 0; */
     font-size: 62px;
     font-weight: 100;
     color: white;
@@ -69,10 +71,10 @@ export default {
 @media (min-width: 320px) and (max-width: 1024px) {
   .home{
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     
@@ -82,14 +84,15 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
+    height: 60%;
     width: 100%;
     z-index: 2;
   }
 
   .title-cont{
     width: 80%;
-     margin: 200px auto;
+    height: 100%;
+    margin: 40% auto;
     font-size: 42px;
     font-weight: 100;
     color: white;
@@ -101,6 +104,8 @@ export default {
   .image-cont{
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .bg-img{
@@ -118,12 +123,15 @@ export default {
  .image-cont{
     height: 100vh;
     width: 100%;
+    overflow-x: hidden;
+    
   }
  .bg-img{
     filter:  saturate(60%);
     height: 90vh;
     transform: scale(2);
     width: 100vw;
+    overflow-y: hidden;
   }
 }
 </style>

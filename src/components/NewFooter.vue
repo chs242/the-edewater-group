@@ -5,7 +5,7 @@
             &copy;Powered by  
             </div>
             <div class="img-cont">
-            <a href="#"><img src="../assets/SVGLogo.svg" alt="SoftwareBuild Logo"></a>
+            <a href="#"><img src="../assets/SVGLogo.svg" alt="SoftwareBuild Logo" height="50px"></a>
             </div>
         </div>
         <div class="footer-2">
@@ -29,13 +29,12 @@ export default {
     display: flex;
     flex-flow:column;
     width: 100%;
-    height: 100px;
 }
 
 .footer-1{
   width: 100%;
-  height: 65px;
-  padding-top: 20px;
+  height: 60px;
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -43,7 +42,7 @@ export default {
   background-color: #f2f2f2;
 }
 .legal-cont{
-    padding-top: 8px;
+    padding-top: 15px;
 }
 
 .img-cont{
@@ -52,6 +51,7 @@ export default {
 .footer-2 a{
   padding: 0 10px 0 10px;
   color: #151515;
+  text-decoration: none;
 }
 
 .footer-2{
@@ -59,20 +59,16 @@ export default {
   height: 35px;
   width: 100%;
   padding-left: 8px;
+  padding-top: 15px;
   z-index: 100;
   background-color: #f2f2f2;
 }
 
-.footer-2 a{
-    text-decoration: none;
-}
-
 
 @media (min-width: 320px) and (max-width: 1024px) {
-  .root-footer{
-    margin-top: 30vh;
-    
-   }
+  .img-cont{
+  width: 80px;
+}
   
 }
 

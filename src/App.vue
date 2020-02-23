@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <div class="logo-wrapper"><img src="../public/assets/SmallLogo.png" alt=""></div>
+      <div class="logo-wrapper"><img src="../public/assets/edgewater_logo.jpg" alt=""></div>
       <router-link to="/" class="mobile">Home</router-link> 
       <router-link to="/about" class="mobile">About</router-link>
       <router-link to="/portfolio" class="mobile">Portfolio</router-link>
@@ -50,13 +50,19 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
- 
+  background-color: background; -moz-linear-gradient:(80deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(39%, rgba(255,255,255,1)), color-stop(90%, rgba(28,120,218,1)), color-stop(100%, rgba(24,115,204,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(80deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(80deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(80deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* ie10+ */
+background: linear-gradient(10deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1873CC',GradientType=0 ); /* ie6-9 */
 }
 
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
   margin-left: 40%;
   font-weight: bold;
   text-align: center;
@@ -71,11 +77,11 @@ export default {
 }
 
 #nav a:hover{
-  color: #42b983;
+  color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #2c3e50;
 }
 
 .for-mobile{
@@ -98,8 +104,13 @@ img{
 
 @media (min-width: 320px) and (max-width: 1024px) {
   #nav {
-  background-color: rgb(255, 255, 255);
-  opacity: 0.5;
+  background-color: background; -moz-linear-gradient:(240deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+                    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(39%, rgba(255,255,255,1)), color-stop(90%, rgba(28,120,218,1)), color-stop(100%, rgba(24,115,204,1))); /* safari4+,chrome */
+                    background: -webkit-linear-gradient(240deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+                    background: -o-linear-gradient(240deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+                    background: -ms-linear-gradient(240deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* ie10+ */
+                    background: linear-gradient(210deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 10%, rgba(255,255,255,1) 61%, rgba(255,255,255,1) 100%); /* w3c */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1873CC', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */;
   position: absolute;
   top: 0%;
   width: 100vw;
@@ -108,16 +119,17 @@ img{
   flex-direction: row;
   justify-content: space-between;
   z-index: 100;
- 
+}
+
+#nav a{
+  margin-left: 30%;
 }
 .for-mobile{
-  color: black;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5em;
   display: inline;
   padding: 0;
   padding-top: 20px;
-  margin-right: 50px;
   max-width: content;
 }
 
@@ -126,23 +138,21 @@ img{
 }
 
 #nav a:hover{
-  color: #42b983;
+  color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #2c3e50;
 }
 
 .logo-wrapper{
-  height: 80%;
-  width: 10%;
-  padding: 0px 0;
-  padding-top: 10px;
-  margin-left: 7%;
+  width: 100%;
+  padding-top: 20px;
+  margin-right: 30%;
 }
 
 img{
-  width: 100%;
+  width: 150px;
 }
 
 
@@ -160,24 +170,30 @@ img{
   z-index: 1000;
   top: 0;
   right: 0;
-  background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   font-family: 'Josefin Sans', sans-serif;
+  background-color: background; -moz-linear-gradient:(260deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 6%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(24,115,204,1)), color-stop(6%, rgba(28,120,218,1)), color-stop(87%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1))); /* safari4+,chrome */
+                    background: -webkit-linear-gradient(260deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 6%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+                    background: -o-linear-gradient(260deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 6%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+                    background: -ms-linear-gradient(260deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 6%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%); /* ie10+ */
+                    background: linear-gradient(190deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 6%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%); /* w3c */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1873CC', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
 }
 
 .sidenav a {
   padding: 20px 8px 10px 32px;
   text-decoration: none;
   font-size: 32px;
-  color: #818181;
+  color: #fff;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #2c3e50;
 }
 
 .sidenav .closebtn {
@@ -191,9 +207,9 @@ img{
 @media (min-width: 320px) and (max-width: 580px) {
   /* Device = Most of the Smartphones Mobiles (Portrait)*/
   .logo-wrapper{
-    width: 13%;
     padding-top: 20px;
+    width: 100%;
+    margin-right: 0px;
   }
-  
 }
 </style>

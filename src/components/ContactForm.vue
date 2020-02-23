@@ -11,7 +11,7 @@
           <div id="contact-form" class="contact-form">
             <div class="separator"></div>
             <div v-if="isSending" class="loading">Sending...</div>
-              <form class="form" @submit="onSubmit">
+              <form class="form" name="contact" method="POST" data-netlify="true">
                 <input required name="name" v-model='contact.name' placeholder="Name" type="text" autocomplete="off">
                 <input required name="email" v-model="contact.email" placeholder="E-mail" type="email" autocomplete="off">
                 <textarea name="message" v-model="contact.message" rows="4" placeholder="Message"></textarea>
