@@ -11,28 +11,17 @@
           <div id="contact-form" class="contact-form">
             <div class="separator"></div>
            
-              <!-- <form class="form" name="contact" method="POST" data-netlify="true">
+                <form @submit.prevent="handleSubmit" class="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <p class="hidden">
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <input name="name" placeholder="Name" type="text">
                 <input name="email" placeholder="E-mail" type="email">
                 <textarea name="message" rows="4" placeholder="Message"></textarea>
                 <div data-netlify-recaptcha="true"></div>
                 <button class="button" type="submit">Send</button>
-              </form> -->
-              <form name="contact" method="POST" data-netlify="true">
-                <p>
-                  <label>Your Name: <input type="text" name="name" /></label>   
-                </p>
-                <p>
-                  <label>Your Email: <input type="email" name="email" /></label>
-                </p>
-                
-                <p>
-                  <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
               </form>
+              
             </div>
           </div>
         </div>
@@ -40,46 +29,47 @@
 </template>
 
 <script>
-// export default {
-//   name:"ContactForm",
-//   data(){
-//     return{
-//     formData: {
-//         name: '',
-//         email: '',
-//         message: '',
-//     },
-//     isSending: false
-//     }
-//   },
-//   methods: {
-//     encode(data) {
-//       return Object.keys(data)
-//         .map(
-//           key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-//         )
-//         .join("&");
-//     },
-//     handleSubmit() {
-//       fetch("/", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-//         body: this.encode({
-//           "form-name": "contact",
-//           ...this.formData
-//         })
-//       })
-//         .then((res) =>
-//           console.log(res),
-//           alert(
-//             "Thank you!\rWe have successfully recieved your form submission!"
-//           )
-//         )
-//         .catch(error => alert(error));
-//     }
-//   }
 
-// }
+export default {
+  name:"ContactForm",
+  data(){
+    return{
+    formData: {
+        name: '',
+        email: '',
+        message: '',
+    },
+    isSending: false
+    }
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+    },
+    handleSubmit() {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": "contact",
+          ...this.formData
+        })
+      })
+        .then((res) =>
+          console.log(res),
+          alert(
+            "Thank you!\rWe have successfully recieved your form submission!"
+          )
+        )
+        .catch(error => alert(error));
+    }
+  }
+
+}
 </script>
 
 <style scoped>
