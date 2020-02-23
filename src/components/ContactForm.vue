@@ -11,16 +11,31 @@
           <div id="contact-form" class="contact-form">
             <div class="separator"></div>
            
-                <form @submit.prevent="handleSubmit" class="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                <p class="hidden">
-                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                <input name="name" placeholder="Name" type="text">
-                <input name="email" placeholder="E-mail" type="email">
-                <textarea name="message" rows="4" placeholder="Message"></textarea>
-                <div data-netlify-recaptcha="true"></div>
-                <button class="button" type="submit">Send</button>
-              </form>
+                <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p hidden>
+                    <label>
+                      Don’t fill this out:
+                      <input name="bot-field" />
+                    </label>
+                  </p>
+                  <div class="sender-info">
+                    <div>
+                      <!-- <label for="name" class="label" >Your name</label> -->
+                      <input type="text" name="name" v-model="formData.name" placeholder="Name" />
+                    </div>
+                    <div>
+                      <!-- <label for="email">Your email</label> -->
+                      <input type="email" name="email" v-model="formData.email" placeholder="E-Mail" />
+                    </div>
+                  </div>
+
+                  <div class="message-wrapper">
+                    <!-- <label for="message">Message</label> -->
+                    <textarea name="message" v-model="formData.message" placeholder="Message"></textarea>
+                    <button @click="handleSubmit" icon="send" :cta="true">Send</button>
+                  </div>
+                </form>
               
             </div>
           </div>
@@ -30,17 +45,12 @@
 
 <script>
 
+
 export default {
-  name:"ContactForm",
-  data(){
-    return{
-    formData: {
-        name: '',
-        email: '',
-        message: '',
-    },
-    isSending: false
-    }
+  data() {
+    return {
+      formData: {}
+    };
   },
   methods: {
     encode(data) {
@@ -59,8 +69,7 @@ export default {
           ...this.formData
         })
       })
-        .then((res) =>
-          console.log(res),
+        .then(() =>
           alert(
             "Thank you!\rWe have successfully recieved your form submission!"
           )
@@ -68,8 +77,7 @@ export default {
         .catch(error => alert(error));
     }
   }
-
-}
+};
 </script>
 
 <style scoped>
