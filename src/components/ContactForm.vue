@@ -11,13 +11,10 @@
           <div id="contact-form" class="contact-form">
             <div class="separator"></div>
            
-              <form @submit.prevent="handleSubmit" class="form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-                <!-- Hidden input to check for bots -->
-                <input type="hidden" name="form-name" value="contact" />
-
-                <input required name="name" v-model='formData.name' placeholder="Name" type="text" autocomplete="off">
-                <input required name="email" v-model="formData.email" placeholder="E-mail" type="email" autocomplete="off">
-                <textarea name="message" v-model="formData.message" rows="4" placeholder="Message"></textarea>
+              <form class="form" name="contact" method="POST" data-netlify="true">
+                <input required name="name" placeholder="Name" type="text" autocomplete="off">
+                <input required name="email" placeholder="E-mail" type="email" autocomplete="off">
+                <textarea name="message" rows="4" placeholder="Message"></textarea>
                 <button class="button" type="submit">Send</button>
               </form>
             </div>
@@ -27,46 +24,46 @@
 </template>
 
 <script>
-export default {
-  name:"ContactForm",
-  data(){
-    return{
-    formData: {
-        name: '',
-        email: '',
-        message: '',
-    },
-    isSending: false
-    }
-  },
-  methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
-        .join("&");
-    },
-    handleSubmit() {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({
-          "form-name": "contact",
-          ...this.formData
-        })
-      })
-        .then((res) =>
-          console.log(res),
-          alert(
-            "Thank you!\rWe have successfully recieved your form submission!"
-          )
-        )
-        .catch(error => alert(error));
-    }
-  }
+// export default {
+//   name:"ContactForm",
+//   data(){
+//     return{
+//     formData: {
+//         name: '',
+//         email: '',
+//         message: '',
+//     },
+//     isSending: false
+//     }
+//   },
+//   methods: {
+//     encode(data) {
+//       return Object.keys(data)
+//         .map(
+//           key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+//         )
+//         .join("&");
+//     },
+//     handleSubmit() {
+//       fetch("/", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//         body: this.encode({
+//           "form-name": "contact",
+//           ...this.formData
+//         })
+//       })
+//         .then((res) =>
+//           console.log(res),
+//           alert(
+//             "Thank you!\rWe have successfully recieved your form submission!"
+//           )
+//         )
+//         .catch(error => alert(error));
+//     }
+//   }
 
-}
+// }
 </script>
 
 <style scoped>
