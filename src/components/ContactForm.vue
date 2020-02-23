@@ -53,7 +53,8 @@ export default {
           ...this.formData
         })
       })
-        .then(() =>
+        .then((res) =>
+          console.log(res),
           alert(
             "Thank you!\rWe have successfully recieved your form submission!"
           )
