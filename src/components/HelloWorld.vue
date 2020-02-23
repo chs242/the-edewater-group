@@ -78,6 +78,16 @@ h4{
  font-weight: 200;
 }
 
+p{
+  background-color: rgba(1,1,1,.6);
+  transition: 2000ms linear;
+}
+
+li::focus p{
+  display: none;
+  transition: 2000ms linear;
+}
+
 ul {
   list-style-type: none;
   margin-left: 100px;
@@ -92,6 +102,7 @@ img{
 }
 
 li {
+  cursor: pointer;
   height: 250px;
   width: 250px;
   background-color: azure;

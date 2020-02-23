@@ -6,12 +6,32 @@
       <router-link to="/about" class="mobile">About</router-link>
       <router-link to="/portfolio" class="mobile">Portfolio</router-link>
       <router-link to="/contact" class="mobile">Contact</router-link>
-      <a href="#" class="for-mobile">Menu</a>
+      <a href="#" class="for-mobile" @click="openNav">Menu</a>
+    </div>
+    <div id="mySidenav" class="sidenav" @click="closeNav">
+      <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>
+      <router-link to="/" class="mobile" >Home</router-link> 
+      <router-link to="/about" class="mobile" >About</router-link>
+      <router-link to="/portfolio" class="mobile" >Portfolio</router-link>
+      <router-link to="/contact" class="mobile" >Contact</router-link>
     </div>
     <router-view />
   </div>
 </template>
 
+<script>
+export default {
+  methods:{
+    openNav: function() {
+      document.getElementById("mySidenav").style.width = "80%";
+    },
+    closeNav: function() {
+      document.getElementById("mySidenav").style.width = "0";
+    },
+    toggleSidebar () { if (this.$sidebar.showSidebar) { this.$sidebar.displaySidebar(false) } }
+  }
+}
+</script>
 <style>
 
 #app {
@@ -72,9 +92,11 @@ img{
   width: 86%;
 }
 
+.sidenav{
+  display: none;
+}
 
 @media (min-width: 320px) and (max-width: 1024px) {
-  /* ##Device = Tablets, Ipads (portrait) */
   #nav {
   background-color: rgb(255, 255, 255);
   opacity: 0.5;
@@ -122,6 +144,48 @@ img{
 img{
   width: 100%;
 }
+
+
+
+/* sidenav  */
+.sidenav{
+  display: inline;
+}
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.sidenav a {
+  padding: 20px 8px 10px 32px;
+  text-decoration: none;
+  font-size: 32px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 @media (min-width: 320px) and (max-width: 580px) {
