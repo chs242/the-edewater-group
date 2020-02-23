@@ -6,10 +6,10 @@
       <router-link to="/about" class="mobile">About</router-link>
       <router-link to="/portfolio" class="mobile">Portfolio</router-link>
       <router-link to="/contact" class="mobile">Contact</router-link>
-      <a href="#" class="for-mobile" @click="openNav">Menu</a>
+      <a href="#" class="for-mobile" @click="navbarOpen = !navbarOpen">Menu</a>
     </div>
-    <div id="mySidenav" class="sidenav" @click="closeNav">
-      <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>
+    <div id="mySidenav" :class="{open: navbarOpen}" class="sidenav" @click="navbarOpen = !navbarOpen">
+      <a href="javascript:void(0)" class="closebtn" @click.stop="navbarOpen = !navbarOpen">&times;</a>
       <router-link to="/" class="mobile" >Home</router-link> 
       <router-link to="/about" class="mobile" >About</router-link>
       <router-link to="/portfolio" class="mobile" >Portfolio</router-link>
@@ -21,13 +21,12 @@
 
 <script>
 export default {
+  data() {
+    return {
+      navbarOpen: false,
+    }
+  },
   methods:{
-    openNav: function() {
-      document.getElementById("mySidenav").style.width = "80%";
-    },
-    closeNav: function() {
-      document.getElementById("mySidenav").style.width = "0";
-    },
     toggleSidebar () { if (this.$sidebar.showSidebar) { this.$sidebar.displaySidebar(false) } }
   }
 }
@@ -181,6 +180,10 @@ img{
                     background: -ms-linear-gradient(260deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 6%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%); /* ie10+ */
                     background: linear-gradient(190deg, rgba(24,115,204,1) 0%, rgba(28,120,218,1) 6%, rgba(255,255,255,1) 87%, rgba(255,255,255,1) 100%); /* w3c */
                     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1873CC', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
+}
+
+.open {
+  width: 80% !important;
 }
 
 .sidenav a {
