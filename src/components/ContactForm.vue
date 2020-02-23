@@ -11,11 +11,27 @@
           <div id="contact-form" class="contact-form">
             <div class="separator"></div>
            
-              <form class="form" name="contact" method="POST" data-netlify="true">
-                <input required name="name" placeholder="Name" type="text" autocomplete="off">
-                <input required name="email" placeholder="E-mail" type="email" autocomplete="off">
+              <!-- <form class="form" name="contact" method="POST" data-netlify="true">
+                <input name="name" placeholder="Name" type="text">
+                <input name="email" placeholder="E-mail" type="email">
                 <textarea name="message" rows="4" placeholder="Message"></textarea>
+                <div data-netlify-recaptcha="true"></div>
                 <button class="button" type="submit">Send</button>
+              </form> -->
+              <form name="contact" method="POST" data-netlify="true">
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>   
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
               </form>
             </div>
           </div>
