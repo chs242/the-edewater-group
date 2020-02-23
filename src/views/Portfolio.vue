@@ -7,6 +7,7 @@
     <HelloWorld title="developments of 10 units+"></HelloWorld>
     <HelloWorld title="developments of 15 units+"></HelloWorld>
     <HelloWorld title="profitable developments of 50 units+"></HelloWorld>
+    
     <NewFooter />
   </div>
 </template>

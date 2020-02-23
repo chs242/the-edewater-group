@@ -6,7 +6,7 @@
     <div class="sub-head-wrapper">
       <h4>This is where your text starts. You can click here and start typing. Et dolore magnam aliquam quaerat voluptatem ut enim ad minima veniam quis nostrum exercitationem ullam corporis.</h4>
     </div>
-    <ul>
+    <!--<ul>
       <li>
         <img class="bg-img" src="../assets/SVGLogo.svg" alt="">
         <p>name of development</p>
@@ -27,7 +27,44 @@
         <img class="bg-img" src="../assets/SVGLogo.svg" alt="">
         <p>name of development</p>
       </li>
-    </ul>
+    </ul> -->
+
+    <div class="container">
+      <div class="content">
+          <a>
+            <div class="content-overlay"></div>
+            <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+            <div class="content-details fadeIn-top">
+              <h3>This is a title</h3>
+              <p>This is a short description</p>
+            </div>
+          </a>
+        </div>
+    </div>
+    <div class="container">
+      <div class="content">
+          <a>
+            <div class="content-overlay"></div>
+            <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+            <div class="content-details fadeIn-top">
+              <h3>This is a title</h3>
+              <p>This is a short description</p>
+            </div>
+          </a>
+        </div>
+    </div>
+    <div class="container">
+      <div class="content"  @click="isActive = !isActive">
+          <a>
+            <div class="content-overlay" :class="{contentOverlayActive: isActive}"></div>
+            <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+            <div class="content-details fadeIn-top" :class="{contentDetailsActive: isActive}">
+              <h3>This is a title</h3>
+              <p>This is a short description</p>
+            </div>
+          </a>
+        </div>
+    </div>
     
   </div>
 </template>
@@ -37,13 +74,123 @@ export default {
   name: "HelloWorld",
   props:[
     "title"
-  ]
+  ],
+  data(){
+    return{
+      isActive: false
+    }
+  }
  
 };
 </script>
 
 
 <style scoped>
+
+
+
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
+
+.container{
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 640px){
+  .container{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .container{
+    width: 33.33333%;
+  }
+}
+
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.contentDetailsActive{
+   z-index: 1000;
+  top: 50%;
+  left: 50%;
+  opacity: 1 !important;
+}
+
+.contentOverlayActive{
+  opacity: 1 !important;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
 
 .head-wrapper{
   margin-left: 100px;
@@ -74,7 +221,7 @@ export default {
  
 }
 
-h4{
+/*h4{
  font-weight: 200;
 }
 
@@ -172,5 +319,5 @@ a {
     .head-wrapper:after{
       margin-left: 38%;
     }
-}
+} */ 
 </style>

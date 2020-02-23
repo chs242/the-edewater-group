@@ -69,7 +69,6 @@ form {
   margin: 12px auto 44px;
   width: 80%;
   max-width: 800px;
-  @apply relative;
 }
 input,
 textarea {
