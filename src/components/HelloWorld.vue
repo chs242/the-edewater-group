@@ -30,35 +30,35 @@
     </ul> -->
 
     <div class="container">
-      <div class="content">
-          <a>
-            <div class="content-overlay"></div>
-            <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
-            <div class="content-details fadeIn-top">
-              <h3>This is a title</h3>
-              <p>This is a short description</p>
-            </div>
-          </a>
-        </div>
-    </div>
-    <div class="container">
-      <div class="content">
-          <a>
-            <div class="content-overlay"></div>
-            <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
-            <div class="content-details fadeIn-top">
-              <h3>This is a title</h3>
-              <p>This is a short description</p>
-            </div>
-          </a>
-        </div>
-    </div>
-    <div class="container">
       <div class="content"  @click="isActive = !isActive">
           <a>
             <div class="content-overlay" :class="{contentOverlayActive: isActive}"></div>
             <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
             <div class="content-details fadeIn-top" :class="{contentDetailsActive: isActive}">
+              <h3>This is a title</h3>
+              <p>This is a short description</p>
+            </div>
+          </a>
+        </div>
+    </div>
+    <div class="container">
+      <div class="content"  @click="isActive1 = !isActive1">
+          <a>
+            <div class="content-overlay" :class="{contentOverlayActive: isActive1}"></div>
+            <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+            <div class="content-details fadeIn-top" :class="{contentDetailsActive: isActive1}">
+              <h3>This is a title</h3>
+              <p>This is a short description</p>
+            </div>
+          </a>
+        </div>
+    </div>
+    <div class="container">
+      <div class="content"  @click="isActive2 = !isActive2">
+          <a>
+            <div class="content-overlay" :class="{contentOverlayActive: isActive2}"></div>
+            <img class="content-image" src="https://images.unsplash.com/photo-1433360405326-e50f909805b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=359e8e12304ffa04a38627a157fc3362">
+            <div class="content-details fadeIn-top" :class="{contentDetailsActive: isActive2}">
               <h3>This is a title</h3>
               <p>This is a short description</p>
             </div>
@@ -77,7 +77,9 @@ export default {
   ],
   data(){
     return{
-      isActive: false
+      isActive: false,
+      isActive1: false,
+      isActive2: false,
     }
   }
  
@@ -257,7 +259,7 @@ li {
 }
 a {
   color: #42b983;
-}
+}*/
 
 @media (min-width: 500px) and (max-width: 520px) {
     .hello{
@@ -278,25 +280,9 @@ a {
       width: 100%;
       margin: 0;
     }
-    h2, h4{
-      margin: 0;
-      padding: 10px 20px;
-      text-align: center;
-    }
 
     .head-wrapper:after{
       margin-left: 45%;
-    }
-
-    ul{
-      justify-content: center;
-      margin: 0;
-    }
-
-    li{
-      width: 80%;
-      height: 65vw;
-      margin: 20px 0;
     }
     
 }
@@ -319,5 +305,5 @@ a {
     .head-wrapper:after{
       margin-left: 38%;
     }
-} */ 
+} 
 </style>
