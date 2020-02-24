@@ -107,10 +107,6 @@ export default {
     font-size: 46px;
   }
 
-   h1, h6{
-    margin-top: 30%;
-  }
-
 }
 
 
