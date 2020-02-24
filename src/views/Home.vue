@@ -1,14 +1,13 @@
 <template>
-  <div class="home">
-    <div class="title-wrapper">
+  <div class="home">   
+    <div class="image-cont">
       <div class="title-cont">
         <h1>The sky is the limit</h1>
         <h6>London based real estate developers</h6>
+      <img class="bg-img" src="../assets/london-night.jpg" alt="">
       </div>
     </div>
-    <div class="image-cont">
-      <img class="bg-img" src="../assets/london-night.jpg" alt="">
-    </div>
+    <div class="push"></div>
     <NewFooter></NewFooter>
   </div>
 </template>
@@ -35,108 +34,74 @@ export default {
     overflow-x: hidden;
     
   }
-
-  .title-wrapper{
-    position: absolute;
-    top: 0;
-    right: 0;
+    .image-cont{
     height: 100%;
     width: 100%;
-    z-index: 2;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-bottom: -10px;
+  }
+
+  h1, h6{
+    z-index: 300;
+    margin: 0;
+    margin-top: 10%;
+  }
+
+
+  img{
+    position: fixed;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: -200;
+    filter:  saturate(60%);
+    transform: scale(1.5);
+    width: 100%;
+    min-width: 773px;
+    height: 100%;
+    
   }
 
   .title-cont{
-    width: 80%;
+    width: 100%;
+    overflow: hidden;
     margin: 0 auto;
-    /* padding: 200px 0; */
     font-size: 62px;
     font-weight: 100;
-    color: white;
+    color: #fff;
     letter-spacing: 3px;
     font-family: 'Josefin Sans', sans-serif;
   }
 
-
-  .image-cont{
-    height: 100%;
+  .push{
     width: 100%;
+    margin-bottom: 10px;
   }
 
-  .bg-img{
-    filter:  saturate(60%);
-    width: 100%;
-    height: 100%;
-  }
 
 @media (min-width: 320px) and (max-width: 1024px) {
   .home{
-    position: absolute;
+    width: 100%;
+    height: 100vh;
+    min-height: 1280px;
+  }
+
+  img{
+    position: fixed;
     top: 0;
-    right: 0;
-    /* height: 100%; */
-    width: 100%;
-    /* overflow-y: scroll; */
-    overflow-x: hidden;
-    
+    left: 0;
+    object-fit: cover;
   }
 
-  .title-wrapper{
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* height: 60%; */
-    width: 100%;
-    z-index: 2;
+   h1, h6{
+    margin-top: 30%;
   }
-
-  .title-cont{
-    width: 80%;
-    /* height: 100%; */
-    margin: 40% auto;
-    margin-bottom: 0;
-    font-size: 42px;
-    font-weight: 100;
-    color: white;
-    letter-spacing: 3px;
-    font-family: 'Josefin Sans', sans-serif;
-  }
-
-  h6{
-    margin-bottom: 0;
-  }
-
-
-  .image-cont{
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-
-  .bg-img{
-    filter:  saturate(60%);
-    height: 110vh;
-    transform: scale(1.5);
-    width: 100vw;
-    min-width: 773px;
-  }
-
 }
 
-@media (min-width: 320px) and (max-width: 580px) {
-  /* Device = Most of the Smartphones Mobiles (Portrait)*/
- .image-cont{
-    /* height: 100vh; */
-    width: 100%;
-    overflow-x: hidden;
-    
-  }
- .bg-img{
-    filter:  saturate(60%);
-    height: 90vh;
-    transform: scale(2);
-    width: 100vw;
-    overflow-y: hidden;
+@media (min-width: 320px) and (max-width: 1024px) {
+  .home{
+    max-height: 850;
   }
 }
 </style>

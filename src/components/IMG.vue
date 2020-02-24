@@ -32,10 +32,6 @@ export default {
       min-height: 350px;
     }
 
-    img{
-      
-      /* transform: scale(2); */
-    }
   }  
 
   @media (min-width: 730px) and (max-width: 930px) {

@@ -1,7 +1,7 @@
 <template>
   <div class="root-contact">
       <IMG />
-      <ContactForm></ContactForm>
+      <ContactForm />
       <NewFooter />
     </div>
 </template>

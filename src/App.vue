@@ -6,7 +6,7 @@
       <router-link to="/about" class="mobile">About</router-link>
       <router-link to="/portfolio" class="mobile">Portfolio</router-link>
       <router-link to="/contact" class="mobile">Contact</router-link>
-      <a href="#" class="for-mobile" @click="navbarOpen = !navbarOpen">Menu</a>
+      <a href="#" class="for-mobile" @click="navbarOpen = !navbarOpen"><div class="hamburger"><span></span><span></span><span></span></div></a>
     </div>
     <div id="mySidenav" :class="{open: navbarOpen}" class="sidenav" @click="navbarOpen = !navbarOpen">
       <a href="javascript:void(0)" class="closebtn" @click.stop="navbarOpen = !navbarOpen">&times;</a>
@@ -29,6 +29,23 @@ export default {
 }
 </script>
 <style>
+span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: #fff;
+  border-radius: 3px;
+  position: relative;
+  z-index: 300;
+}
+
+.hamburger{
+  float: right;
+  margin: 8px;
+  margin-right: 25px;
+}
 
 #app {
   font-family: 'Playfair Display', serif;
@@ -36,6 +53,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow: hidden;
 }
 
 #nav {
@@ -57,7 +75,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 
 #nav a {
-  font-weight: bold;
   color: #fff;
   margin-left: 40%;
   font-weight: bold;
@@ -110,7 +127,7 @@ img{
   position: absolute;
   top: 0%;
   width: 100vw;
-  height: 70px;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -126,11 +143,11 @@ img{
   margin: 0;
   padding: 0;
   width: 50%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 img{
-  width: 50%;
+  width: 58%;
   padding-left: 10px;
   float: left;
 }
@@ -166,7 +183,7 @@ img{
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0;
   right: 0;
   overflow-x: hidden;
@@ -198,6 +215,9 @@ img{
 .sidenav a:hover {
   color: #2c3e50;
 }
+.sidenav a:active {
+  color: #2c3e50;
+}
 
 .sidenav .closebtn {
   position: absolute;
@@ -207,7 +227,9 @@ img{
   margin-left: 50px;
 }
 
-@media (min-width: 320px) and (max-width: 580px) {
-  
+@media (min-width: 600px) and (max-width: 850px) {
+  img{
+    width: 30%;
+  }
 }
 </style>

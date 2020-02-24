@@ -1,13 +1,27 @@
 <template>
-  <div class="root-portfolio">
+  <div class="root-portfolio" @scroll.native="isActive2 = !isActive2">
       <IMG />
-    <!-- <div class="image-cont">
-      <img class="bg-img" src="../assets/SVGLogo.svg" alt="">
-    </div> -->
-    <HelloWorld title="developments of 10 units+"></HelloWorld>
-    <HelloWorld title="developments of 15 units+"></HelloWorld>
-    <HelloWorld title="profitable developments of 50 units+"></HelloWorld>
-    
+      <div class="portfolio-inner">
+  
+        <PortfolioTitle title="developments of 10 units+" />
+        <div class="hello-world-cont">
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        </div>
+        <PortfolioTitle title="profitable developments of 50 units+"/>
+        <div class="hello-world-cont">
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        </div>
+        <PortfolioTitle title="developments of 15 units+"/>
+        <div class="hello-world-cont">
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        <HelloWorld projectTitle="Your Title" projectDescription="Your description goes here" />
+        </div>
+      </div>
     <NewFooter />
   </div>
 </template>
@@ -16,6 +30,7 @@
 
 
 import IMG from "@/components/IMG.vue";
+import PortfolioTitle from "@/components/PortfolioTitle.vue";
 import HelloWorld from "@/components/HelloWorld.vue";
 import NewFooter from "@/components/NewFooter.vue";
 
@@ -23,20 +38,48 @@ export default {
   name: "Portfolio",
   components: {
     IMG,
+    PortfolioTitle,
     HelloWorld,
     NewFooter
-  }
+  },
+  // data(){
+  //   return{
+  //     scroll5: false
+  //   }
+  // },
+  // methods: {
+  //    handleScroll() {
+  //     this.scroll5 = window.scrollY;
+  //     let scrolled = this.scroll5 + 50;
+  //     if(this.scroll5 == scrolled){
+  //       return this.scroll5 = true;
+  //     }
+  //     console.log(this.scroll5)
+  //   }
+  // },
+  // mounted() {
+  //   window.addEventListener("scroll", this.handleScroll);
+  // },
+  // destroyed() {
+  //   window.removeEventListener("scroll", this.handleScroll);
+  // }
 };
 </script>
 
 <style scoped>
   .root-portfolio{
     position: absolute;
+    height: 100%;
     top: 0;
     right: 0;
-    height: 100%;
     width: 80%;
     overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .portfolio-inner{
+    display: flex;
+    flex-flow: column;
+    overflow-y:scroll;
     overflow-x: hidden;
     
   }

@@ -29,12 +29,14 @@ export default {
     display: flex;
     flex-flow:column;
     width: 100%;
+   
 }
 
-.footer-1{
+ .footer-1{
   width: 100%;
-  height: 60px;
-  padding-top: 10px;
+  margin: 0;
+  padding-bottom: 20px;
+  height: 35px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -42,12 +44,13 @@ export default {
   background-color: #f2f2f2;
 }
 .legal-cont{
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .img-cont{
   width: 80px;
 }
+
 .footer-2 a{
   padding: 0 10px 0 10px;
   color: #151515;
@@ -56,20 +59,22 @@ export default {
 
 .footer-2{
   text-align: center;
-  height: 35px;
   width: 100%;
-  padding-left: 8px;
-  padding-top: 15px;
+  padding-bottom: 4px;
+  margin: 0;
   z-index: 100;
   background-color: #f2f2f2;
 }
 
 
 @media (min-width: 320px) and (max-width: 1024px) {
-  .img-cont{
-  width: 80px;
+  .footer-1{
+  padding-bottom: 5px;
 }
-  
+  .footer-2{
+  padding-bottom: 2px;
+}
+
 }
 
 </style>
