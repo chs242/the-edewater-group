@@ -43,7 +43,7 @@ export default {
   .about-wrapper{
     display: flex;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 10%;
   }
 
   .about-title-wrapper{
@@ -96,19 +96,29 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: 10%;
+    margin-bottom: 50px;
   }
 
   .inner-wrapper{
-    margin-top: 50px;
     width: 80%;
     margin-left: 0px;
   }
 
-  
-}
-@media (min-width: 320px) and (max-width: 1024px) {
   h3:after{
     margin-left: 10%;
   }
+  
 }
+@media (min-width: 320px) and (max-width: 600px){
+  .inner-wrapper{
+    margin-top: 0px
+  }
+}
+
+@media (min-height: 1024px) and (max-height: 1324px) {
+  .about-wrapper{
+    margin-bottom: 15%;
+  }
+}
+
 </style>

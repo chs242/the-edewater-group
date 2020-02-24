@@ -1,7 +1,7 @@
 <template>
   <div class="root-contact">
       <IMG />
-      <ContactForm />
+      <ContactForm2 />
       <NewFooter />
     </div>
 </template>
@@ -10,14 +10,14 @@
 
 
 import IMG from "@/components/IMG.vue";
-import ContactForm from "@/components/ContactForm.vue";
+import ContactForm2 from "@/components/ContactForm2.vue";
 import NewFooter from "@/components/NewFooter.vue";
 
 export default {
   name: "Contact",
   components: {
-    ContactForm,
     IMG,
+    ContactForm2,
     NewFooter
   }
 };

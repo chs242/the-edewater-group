@@ -4,7 +4,7 @@
       <div class="title-cont">
         <h1>The sky is the limit</h1>
         <h6>London based real estate developers</h6>
-      <img class="bg-img" src="../assets/london-night.jpg" alt="">
+        <img class="bg-img" src="../assets/london-night.jpg" alt="">
       </div>
     </div>
     <div class="push"></div>
@@ -45,6 +45,12 @@ export default {
   h1, h6{
     z-index: 300;
     margin: 0;
+  }
+
+  h1{
+    margin-top: 30%;
+  }
+  h6{
     margin-top: 10%;
   }
 
@@ -80,28 +86,32 @@ export default {
   }
 
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 750px) and (max-width: 1024px) {
   .home{
     width: 100%;
-    height: 100vh;
+  }
+  .image-cont{
     min-height: 1280px;
   }
 
-  img{
-    position: fixed;
-    top: 0;
-    left: 0;
-    object-fit: cover;
+}
+@media (min-width: 320px) and (max-width: 750px) {
+  .home{
+    width: 100%;
+  }
+  .image-cont{
+    min-height: 850px;
+  }
+
+  .title-cont{
+    font-size: 46px;
   }
 
    h1, h6{
     margin-top: 30%;
   }
+
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
-  .home{
-    max-height: 850;
-  }
-}
+
 </style>
