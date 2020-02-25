@@ -111,7 +111,8 @@ export default {
 }
 @media (min-width: 320px) and (max-width: 600px){
   .inner-wrapper{
-    margin-top: 0px
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
 }
 

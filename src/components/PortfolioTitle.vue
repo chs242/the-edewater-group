@@ -110,7 +110,10 @@ export default {
       margin-left: 38%;
     }
     h2, h4{
-        max-width: 50%;
+        max-width: 45%;
+    }
+    .sub-head-wrapper{
+        width: 90%;
     }
 } 
 </style>
