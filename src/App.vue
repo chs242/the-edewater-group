@@ -232,4 +232,9 @@ img{
     width: 30%;
   }
 }
+@media (min-width: 850px) and (max-width: 1024px) {
+  img{
+    width: 20%;
+  }
+}
 </style>
