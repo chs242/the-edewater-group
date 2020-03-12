@@ -11,11 +11,12 @@
             <div class="about-text-wrapper">
                 <div id="contact-form" class="contact-form">
                     <div class="separator"></div>
-                        <form class="form">
+                        <form name="user-form" class="form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                          <input type="hidden" name="form-name" value="user-form" />
                             <input required name="name"  placeholder="Name" type="text" autocomplete="off">
                             <input required name="email" placeholder="E-mail" type="email" autocomplete="off">
                             <textarea name="message" rows="4" placeholder="Message"></textarea>
-                        <button class="button">Send</button>
+                        <button type="submit" class="button">Send</button>
                         </form>
                     </div>
             </div>
